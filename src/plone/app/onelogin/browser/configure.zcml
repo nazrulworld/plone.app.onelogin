@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="plone.onelogin">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="plone.onelogin.interfaces.IPloneOneloginLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="plone.onelogin"
+      type="plone"
+      directory="static"
+      />
+
+</configure>
