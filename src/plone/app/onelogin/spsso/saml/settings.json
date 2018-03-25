@@ -1,0 +1,30 @@
+{
+    "strict": true,
+    "debug": true,
+    "sp": {
+        "entityId": "http://localhost:8080/site/spsso-metadata/",
+        "assertionConsumerService": {
+            "url": "http://localhost:8080/site/spsso-acs/?acs",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+        },
+        "singleLogoutService": {
+            "url": "http://localhost:8080/?sls",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "NameIDFormat": "urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified",
+        "x509cert": "",
+        "privateKey": ""
+    },
+    "idp": {
+        "entityId": "https://app.onelogin.com/saml/metadata/767651",
+        "singleSignOnService": {
+            "url": "https://zitelab-dev.onelogin.com/trust/saml2/http-post/sso/767651",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "singleLogoutService": {
+            "url": "https://zitelab-dev.onelogin.com/trust/saml2/http-redirect/slo/767651",
+            "binding": "urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+        },
+        "x509cert": "MIIEIzCCAwugAwIBAgIUDjY0LF73dMYZGV9EVnemwpgKeYIwDQYJKoZIhvcNAQEFBQAwXDELMAkGA1UEBhMCVVMxFDASBgNVBAoMC1ppdGVsYWIgQXBTMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxIDAeBgNVBAMMF09uZUxvZ2luIEFjY291bnQgMTI0NDcxMB4XDTE4MDMyMzEzMDU1OVoXDTIzMDMyMzEzMDU1OVowXDELMAkGA1UEBhMCVVMxFDASBgNVBAoMC1ppdGVsYWIgQXBTMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxIDAeBgNVBAMMF09uZUxvZ2luIEFjY291bnQgMTI0NDcxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqazc5qStYaZ4YdP7oQO5CzgtA8WmWn8NV/jHWotSVOKFSlFXV3gG8PmmhUzG5L/3GCxFQG6FDuKcVKeDmohtp4R2/iUT4zt1BWY3pLQ4vnS7clAlGDoZRN0XsHMGtF68dzFQ31uohc4ukJdF6xQiXkwPUmKy3L1G5JChzCzNMLYrnTMUlmuhAW7j03eFF3YEbbcd17GZm8oeWeE6Ml6oPhkcyfZWG9gDwk54Pu0mgcxFaDHskt4YTadu0s7tVj4FtYMllQ9NEddHAUvIOuEGYqtvM5PaV9+hDls6ub1qFR+1XJbc9sQzAYX7JLLEb5YmrxwlRgh/CY6WAVdJU46AMQIDAQABo4HcMIHZMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFO3YYLlJyI0ybI4mFX7y6kxjShCPMIGZBgNVHSMEgZEwgY6AFO3YYLlJyI0ybI4mFX7y6kxjShCPoWCkXjBcMQswCQYDVQQGEwJVUzEUMBIGA1UECgwLWml0ZWxhYiBBcFMxFTATBgNVBAsMDE9uZUxvZ2luIElkUDEgMB4GA1UEAwwXT25lTG9naW4gQWNjb3VudCAxMjQ0NzGCFA42NCxe93TGGRlfRFZ3psKYCnmCMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQUFAAOCAQEAHkisRYD9Z2zntEf6f/GZlOWgwMfRkSqtlNwde9Yt2j5jRIw+lJu2y6dDK19TlmDxtT7kAIwyTk+W+kwdPVAiK7RxRsQZ4ccD/l6WBuY5eKSSU8fI1kixxr8gqQ5jorSu7dtkf/7USgcgvhKtYUKpxRgFsyaFjqCWb+bGGpmqkht+uLcz0Hf46R9kxin24qWW57orgyeVEvlh0r6uJrnhhO5bZzjWTbWlMlNRFk0O5Khz9lp9E/aP69dhwUlQWB6ZZIkNoAwmKfLwCoSxaOJ0nYjPkpqgzot8XyOJi4Q2+xuaKm5WrmMts5uw/9nakJlRKw4iRZhWYdiKiRKkhQYdPw=="
+    }
+}

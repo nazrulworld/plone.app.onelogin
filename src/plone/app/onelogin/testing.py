@@ -7,10 +7,10 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
-import plone.onelogin
+import plone.app.onelogin
 
 
-class PloneOneloginLayer(PloneSandboxLayer):
+class PloneAppOneloginLayer(PloneSandboxLayer):
 
     defaultBases = (PLONE_APP_CONTENTTYPES_FIXTURE,)
 
@@ -18,32 +18,32 @@ class PloneOneloginLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        self.loadZCML(package=plone.onelogin)
+        self.loadZCML(package=plone.app.onelogin)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'plone.onelogin:default')
+        applyProfile(portal, 'plone.app.onelogin:default')
 
 
-PLONE_ONELOGIN_FIXTURE = PloneOneloginLayer()
+PLONE_APP_ONELOGIN_FIXTURE = PloneAppOneloginLayer()
 
 
-PLONE_ONELOGIN_INTEGRATION_TESTING = IntegrationTesting(
-    bases=(PLONE_ONELOGIN_FIXTURE,),
-    name='PloneOneloginLayer:IntegrationTesting',
+PLONE_APP_ONELOGIN_INTEGRATION_TESTING = IntegrationTesting(
+    bases=(PLONE_APP_ONELOGIN_FIXTURE,),
+    name='PloneAppOneloginLayer:IntegrationTesting',
 )
 
 
-PLONE_ONELOGIN_FUNCTIONAL_TESTING = FunctionalTesting(
-    bases=(PLONE_ONELOGIN_FIXTURE,),
-    name='PloneOneloginLayer:FunctionalTesting',
+PLONE_APP_ONELOGIN_FUNCTIONAL_TESTING = FunctionalTesting(
+    bases=(PLONE_APP_ONELOGIN_FIXTURE,),
+    name='PloneAppOneloginLayer:FunctionalTesting',
 )
 
 
-PLONE_ONELOGIN_ACCEPTANCE_TESTING = FunctionalTesting(
+PLONE_APP_ONELOGIN_ACCEPTANCE_TESTING = FunctionalTesting(
     bases=(
-        PLONE_ONELOGIN_FIXTURE,
+        PLONE_APP_ONELOGIN_FIXTURE,
         REMOTE_LIBRARY_BUNDLE_FIXTURE,
         z2.ZSERVER_FIXTURE,
     ),
-    name='PloneOneloginLayer:AcceptanceTesting',
+    name='PloneAppOneloginLayer:AcceptanceTesting',
 )

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layers>
   <layer
-      name="plone.onelogin"
-      interface="plone.onelogin.interfaces.IPloneOneloginLayer"
+      name="plone.app.onelogin"
+      interface="plone.app.onelogin.interfaces.IPloneAppOneloginLayer"
       />
 </layers>

@@ -21,25 +21,25 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="plone.onelogin"
+      title="plone.app.onelogin"
       directory="profiles/default"
-      description="Installs the plone.onelogin add-on."
+      description="Installs the plone.app.onelogin add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="plone.onelogin (uninstall)"
+      title="plone.app.onelogin (uninstall)"
       directory="profiles/uninstall"
-      description="Uninstalls the plone.onelogin add-on."
+      description="Uninstalls the plone.app.onelogin add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
-      name="plone.onelogin-hiddenprofiles"
+      name="plone.app.onelogin-hiddenprofiles"
       />
 
   <!-- -*- extra stuff goes here -*- -->
